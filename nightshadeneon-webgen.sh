@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 set -e
 # nightshadeNeon Web Generator
-#   - by rav3ndust
+#   - by rav3ndust (https://rav3ndust.xyz/index.html)
+#   - MIT License
 # This script is a simple webpage generator.
 # It generates .html files from .md files you give it.
 # It formats the page using the strictures of our nightshadeNeon theme.
 ########################################################################
-title="nightshadeNeon Web Generator"; version="0.1"; stylesheet="style.css"
+title="nightshadeNeon Web Generator"; version="0.1"; stylesheet="$HOME/Documents/dev_container/nightshadeNeon-webgen/style.css"
 # funcs
 convert () {
     # takes a given .md file, converts it to .html.
@@ -22,7 +23,13 @@ convert () {
     if [ -z "$conv_file" ]; then
         echo "No file name was provided. Exiting..."; exit 1
     fi
-    pandoc $preconv_file -o $conv_file --css=$stylesheet --standalone 
+    # add file extension handling if the user forgets to add ".html" in their filename
+    if [[ ! "$conv_file" == *.html ]]; then
+        conv_file="$conv_file.html"
+        echo "Extension excluded. Filename updated to $conv_file."
+    fi
+    # convert the file
+    pandoc "$preconv_file" -o "$conv_file" --css="$stylesheet" --standalone 
     zenity --info --text="$preconv_file was converted to $conv_file."
 }
 main () {
