@@ -40,3 +40,4 @@ main () {
 }
 # - - - entry
 main 
+# ! TODO add a checker to ensure that `installer.sh` has been ran and the needed deps are present
