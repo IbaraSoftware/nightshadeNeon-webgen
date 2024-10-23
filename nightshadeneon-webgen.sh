@@ -7,7 +7,7 @@ set -e
 # It formats the page using the strictures of our nightshadeNeon theme.
 ########################################################################
 title="nightshadeNeon Web Generator"; version="0.1"
-stylesheet="$HOME/Documents/dev_container/nightshadeNeon-webgen/style.css"
+stylesheet="style.css"
 # funcs
 convert () {
     # takes a given .md file, converts it to .html.
