@@ -1,0 +1,50 @@
+/*
+  nightshadeNeon stylesheet
+Used for nightshadeNeon-webgen for converting .md files to .html files.
+*/
+/* Link colors */
+a:link { color: #FF3131; } /* Unvisited links */
+a:visited { color: #39FF14; } /* Visited links */
+
+/* Text colors */
+body {
+    background-color: black; /* Background color */
+    color: #ffffff; /* Main text color in content areas */
+}
+
+/* Headings and subheadings */
+h1, h2, h3 {
+    color: #ff10f0; /* Primary color for headings */
+}
+
+/* Bold text */
+b, strong {
+    color: #39ff14; /* Color for bold text */
+}
+
+/* Code and preformatted text */
+pre {
+    color: #39ff14; /* Color for preformatted text */
+}
+
+code {
+    color: #39ff14; /* Color for inline code */
+    font-size: 14px; /* Font size for inline code */
+}
+
+/* Blockquotes */
+blockquote {
+    color: #FF10F0; /* Color for blockquotes */
+}
+
+/* Break helper */
+.breakHelper {
+    background-color: #FF10F0; /* Background color for break helper */
+}
+
+/* Footer styles */
+footer {
+    background-color: black; /* Footer background color */
+    color: white; /* Footer text color */
+    text-align: center; /* Center align footer text */
+}
