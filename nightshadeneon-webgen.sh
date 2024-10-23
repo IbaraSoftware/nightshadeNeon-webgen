@@ -13,6 +13,7 @@ convert () {
     # takes a given .md file, converts it to .html.
     # follows the nightshadeNeon theme defined in style.css
     preconv_file=$(zenity --file-selection --title="Please select a file to convert.")
+    # in case a file isn't selected
     if [ -n "$preconv_file" ]; then
         echo "Chosen file to convert: $preconv_file"; sleep 1
     else
@@ -20,6 +21,7 @@ convert () {
     fi
     echo "Chosen file to convert: $preconv_file"; sleep 1
     conv_file=$(zenity --entry --title="choose filename" --text="What would you like to name the converted file?")
+    # in case a filename isn't provided
     if [ -z "$conv_file" ]; then
         echo "No file name was provided. Exiting..."; exit 1
     fi
