@@ -6,8 +6,7 @@ set -e
 # It generates .html files from .md files you give it.
 # It formats the page using the strictures of our nightshadeNeon theme.
 ########################################################################
-title="nightshadeNeon Web Generator"; version="0.1"
-stylesheet="style.css"
+title="nightshadeNeon Web Generator"; version="0.1"; stylesheet="style.css"
 # funcs
 convert () {
     # takes a given .md file, converts it to .html.
